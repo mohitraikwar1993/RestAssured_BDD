@@ -17,8 +17,9 @@ public class Demo1_GetRequest {
 		.then()
 			.statusCode(200)
 			.statusLine("HTTP/1.1 200 OK")
-			.assertThat().body("City", equalTo("Bangalore"))
-			.header("Content-Type", "application/json");
+			.assertThat().body("City", equalTo("Bengaluru"))
+			.header("Content-Type", "application/json")
+			.header("Content-Length", "169");
 		
 		
 		

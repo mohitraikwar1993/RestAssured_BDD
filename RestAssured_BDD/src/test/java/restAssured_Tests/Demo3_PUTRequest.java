@@ -5,7 +5,11 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import org.testng.ITestResult;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import automationUtilities.RestUtils_UserData;
@@ -28,6 +32,11 @@ public class Demo3_PUTRequest
 		
 	}
 	
+	@BeforeMethod
+	public void testStarts()
+	{
+		Reporter.log("Before method starts", true);
+	}
 	@Test
 	public void putUserInfoTest()
 	{
@@ -40,8 +49,27 @@ public class Demo3_PUTRequest
 			.put()
 			
 		.then()
-			.statusCode(200)
+			.statusCode(20)
 			.log().all();
+		
 	}
+	
+	@AfterMethod
+	public void testends(ITestResult t)
+	{
+		if(t.isSuccess())
+		{
+			Reporter.log("test case pass", true);
+			
+		}
+		if(!(t.isSuccess()))
+		{
+			Reporter.log("test case fail", true);
+			
+		}
+		
+	}
+	
+	
 	
 }

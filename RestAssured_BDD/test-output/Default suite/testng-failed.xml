@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="restAssured_Tests.Demo5_BasicValidation_JSON">
+      <class name="MapAPI.AddPlaceMap">
         <methods>
-          <include name="testMultipleContent"/>
+          <include name="getlocation"/>
         </methods>
-      </class> <!-- restAssured_Tests.Demo5_BasicValidation_JSON -->
+      </class> <!-- MapAPI.AddPlaceMap -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -44,7 +44,7 @@ public class Demo5_BasicValidation_JSON
 	@Test(priority=4)
 	public void testMultipleContent()
 	{
-		given()
+		given() 
 		.when()
 			.get("http://jsonplaceholder.typicode.com/posts")
 			
