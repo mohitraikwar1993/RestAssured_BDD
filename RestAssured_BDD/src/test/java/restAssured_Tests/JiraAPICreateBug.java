@@ -1,5 +1,5 @@
 package restAssured_Tests;
 
-public class Test {
+public class JiraAPICreateBug {
 
 }
